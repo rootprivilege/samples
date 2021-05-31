@@ -1,0 +1,25 @@
+R_Evil sample
+
+This is a sample from last year that was found on a compromised WordPress website. I've included all the relevant files for this sample, but some files are missing and therefore some functions are not usable. 
+
+Here's a post I wrote about it:
+
+https://blog.sucuri.net/2020/10/r_evil-wordpress-hacktool-malicious-javascript-injections.html
+
+The most unusual things were that this malware was using the name "r_evil" and that it was much more advanced than what we most often see on infected websites. It also has the ability to remove other types of malware that may already be on the infected website, sort of like a hijacker function as it remove the existing malware and adds its own. 
+
+I was able to verify the malware's capabilities of injecting malicious JavaScript onto the infected website. It does this by loading additional injected malware from the database that gets added to the database table wp_options under the option_name dolly_css (whose code is within the cpl.php main file).
+
+It's usage of multiple files and all the functions it has available makes it unique among WordPress malware, but it's just a tool for managing already compromised WordPress websites so I think the overall threat is low.
+
+Sample files:
+cpl.php
+cpl.php-deobfusc
+_worker.php
+cload.php
+
+
+Missing files:
+add_exception.php
+del_base.php
+dolly_password.php
